@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+
+  edev:
+    build: .
+    image: edev:1.0.0
+    container_name: edev
+    restart: always
+    stdin_open: true
+    tty: true
+    networks:
+      - internal
+
+networks:
+  internal:
+    external: true
